@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="ISO-8859-1">  
+<title>Insert title here</title>  
+</head>  
+<body>  
+  
+<h1>Add New Question</h1>  
+<form action="AddQuestionServlet" method="post">  
+<table>  
+<tr><td>empid:</td><td><input type="text" name="empid"/></td></tr>  
+<tr><td>qid:</td><td><input type="hidden" name="qid"/></td></tr>
+
+<tr><td>qdes:</td><td><input type="text" name="qdesc"/></td></tr>  
+<tr><td colspan="2"><input type="submit" value="Save question"/></td></tr>  
+</table>  
+</form>  
+  
+<br/>  
+<a href="ViewQuestionServlet">view Questions</a>  
+  
+</body>  
+</html>  
