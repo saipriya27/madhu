@@ -24,7 +24,7 @@ public class AnswerDaoImpl implements AnswerDao{
 		try
 		{  
 			con = DBConnection.createConnection();
-			String query = "insert into answer values(answerSequence.NEXTVAL,?,?,?)"; //Insert user details into the table 'USERS'
+		 final String query = "insert into answer(qid,empid,ans) values(?,?,?)"; //Insert user details into the table 'USERS'
 			preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
 			preparedStatement.setInt(1,qid);
 			preparedStatement.setInt(2,empid);

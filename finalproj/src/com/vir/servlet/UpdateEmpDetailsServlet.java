@@ -14,8 +14,8 @@ import com.vir.model.Employee;
 import com.vir.service.EmployeeService;
 import com.vir.service.EmployeeServiceImpl;
 
-@WebServlet("/EditEmployeeServlet2")
-public class EditEmployeeServlet2 extends HttpServlet {
+@WebServlet("/UpdateEmpDetailsServlet")
+public class UpdateEmpDetailsServlet extends HttpServlet {
 	/**
 	 * 
 	 */

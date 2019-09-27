@@ -24,11 +24,13 @@ public class EmployeeDao implements EmployeeDaoInterface {
 
 		Connection con = null;
 		PreparedStatement preparedStatement = null;
+		String query = " insert into employee (empid, ename, email, username, password)"
+		        + " values (?, ?, ?, ?, ?)";
 
-		try
+		try  
 		{
 			con = DBConnection.createConnection();
-			String query = "insert into employee  values (?,?,?,?,?)"; //Insert user details into the table 'USERS'
+			 //Insert user details into the table 'USERS'
 			preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
 			preparedStatement.setInt(1,id);
 			preparedStatement.setString(2, fullName);

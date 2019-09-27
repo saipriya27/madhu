@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.vir.model.Question;
 import com.vir.service.QuestionInterfaceImpl;
 import com.vir.service.QuestionServiceInterface;
-@WebServlet("/EditQuestionServlet2")
-public class EditQuestionServlet2 extends HttpServlet {
+@WebServlet("/UpdateQuestionServlet")
+public class UpdateQuestionServlet extends HttpServlet {
 	/**
 	 * 
 	 */

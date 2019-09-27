@@ -2,6 +2,7 @@ package com.vir.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +29,15 @@ public class EditQuestionServlet extends HttpServlet {
 		
 		HttpSession session=request.getSession();
 		session.setAttribute("qid",qid); 
+		session.setAttribute("details",e);
 		
-		out.print("<form action='EditQuestionServlet2' method='post'>");
+		request.setAttribute("qid",qid); 
+		request.setAttribute("info",e);
+		RequestDispatcher rd=request.getRequestDispatcher("UpdateQuestion.jsp");
+		rd.forward(request, response);
+		
+		
+		/*out.print("<form action='UpdateQuestionServlet' method='post'>");
 		out.print("<table>");
 		out.print("<tr><td></td><td><input type='hidden' name='qid' value='"+e.getQid()+"'/></td></tr>");
 		out.print("<tr><td>empid:</td><td><input type='number' name='empid' value='"+e.getEmpid()+"' readonly/></td></tr>");
@@ -47,9 +55,7 @@ public class EditQuestionServlet extends HttpServlet {
 		
 		
 	
-	     out.print("<a href='ViewAllAnswers'>view answers</a>");  
-		
-		
+	     out.print("<a href='ViewAllAnswers'>view answers</a>");  */
 		
 		out.close();
 	}

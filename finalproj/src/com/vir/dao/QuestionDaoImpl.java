@@ -23,7 +23,7 @@ public class QuestionDaoImpl implements QuestionDaoInterface
 		try
 		{  
 			con = DBConnection.createConnection();
-			String query = "insert into question values(questionSequence.NEXTVAL,?,?)"; //Insert user details into the table 'USERS'
+			String query = "insert into question(empid,qdesc) values(?,?)"; //Insert user details into the table 'USERS'
 			preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
 		
 			//preparedStatement.setInt(1, qid);

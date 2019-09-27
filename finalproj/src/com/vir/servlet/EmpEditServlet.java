@@ -33,7 +33,7 @@ public class EmpEditServlet extends HttpServlet {
         
      
         
-		out.print("<form action='EditEmployeeServlet2' method='post'>");
+		out.print("<form action='UpdateEmpDetailsServlet' method='post'>");
 		
 		
 		out.print("<table>");
